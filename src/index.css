@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-space: 'Space Grotesk', sans-serif;
+    --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: #060913;
+    color: #e0e2f1;
+    font-family: var(--font-inter);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-space);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Micro-grid telemetry background */
+.telemetry-grid {
+  background-image: radial-gradient(rgba(0, 240, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.telemetry-grid-fine {
+  background-image: linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Glassmorphic Obsidian panels */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 240, 255, 0.12);
+}
+
+.glass-panel-elevated {
+  background: rgba(21, 31, 56, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.glass-panel-neural {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+/* Micro-caps label */
+.label-caps {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f1d;
+}
+::-webkit-scrollbar-thumb {
+  background: #262a35;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff80;
+}
